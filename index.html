@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/owfont-master/css/owfont-regular.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="weather-wrapper">
+        <div class="weather-left-block">
+            <i class="weather-icon owf"></i>
+            <div class="weather-item-wrapper">
+                <i class="weather-item-icon weather-item-icon-temperature" style="display: none;"></i>
+                <div class="weather-temperature"></div>
+            </div>
+        </div>
+        <div class="weather-right-block">
+            <div class="weather-item-wrapper">
+                <i class="weather-item-icon weather-item-icon-location"></i>
+                <div class="weather-city editable" contenteditable="true"></div>
+            </div>
+            <div class="weather-item-wrapper" style="display: none;">
+                <i class="weather-item-icon weather-item-icon-description"></i>
+                <div class="weather-description"></div>
+            </div>
+            <div class="weather-item-wrapper">
+                <i class="weather-item-icon weather-item-icon-humidity"></i>
+                <div class="weather-humidity"></div>
+            </div>
+            <div class="weather-item-wrapper">
+                <i class="weather-item-icon weather-item-icon-wind"></i>
+                <div class="weather-wind"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-nav">
+        <h3>Change background</h3>
+        <div class="bg-nav-wrap">
+            <button class="btn-bg-nav btn-prev"><span class="btn-bg-nav-icon material-icons">navigate_before</span></button>
+            <button class="btn-bg-nav btn-next"><span class="btn-bg-nav-icon material-icons">navigate_next</span></button>
+        </div>
+        <input type="hidden" name="bg_index">
+    </div>
+    <div class="wrapper">
+        <time class="time"></time>
+        <date class="date"></date>
+
+        <h1>
+            <span class="greeting"></span>
+            <span class="name editable oninputhide" contenteditable="true" spellcheck="false"></span>
+        </h1>
+        <h2>Ваши планы на сегодня?</h2>
+        <h2 class="focus editable oninputhide" contenteditable="true" spellcheck="false"></h2>
+    </div>
+
+    <div class="citation">
+        <button class="btn-citation"><span class="btn-bg-nav-icon material-icons">loop</span></button>
+        <div class="citation-text"></div>
+        <div class="citation-author"></div>
+        <input type="hidden" name="citation_index">
+    </div>
+
+    <script type="text/javascript" src="assets/js/citation.json"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

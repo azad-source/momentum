@@ -1,0 +1,414 @@
+:root {
+    --bg-color-1: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 1s ease-in-out;
+    -moz-transition: background-image 1s ease-in-out;
+    -webkit-transition: background-image 1s ease-in-out;
+    -o-transition: background-image 1s ease-in-out;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.time {
+    font-size: 8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+.date {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+h1,
+h1 *,
+h2,
+h2 *,
+.time,
+.date,
+.citation,
+.citation *,
+.bg-nav,
+.bg-nav * {
+    color: #fff;
+}
+
+.placeholder {
+    text-decoration: underline;
+    color: seagreen;
+}
+
+.bg-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--bg-color-1);
+    padding: 20px;
+}
+
+.bg-nav h3 {
+    font-weight: normal;
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.bg-nav-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-bg-nav {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 50px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.25s;
+    -moz-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+
+.btn-bg-nav:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transition: 0.25s;
+    -moz-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn-bg-nav .btn-bg-nav-icon {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.citation {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-color-1);
+    padding: 50px 20px;
+    padding-bottom: 10px;
+    width: 800px;
+}
+
+.citation-text {
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.citation-author {
+    font-size: 13px;
+    text-align: right;
+    user-select: none;
+}
+
+.btn-citation {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.btn-citation .btn-bg-nav-icon {
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.btn-citation .btn-bg-nav-icon:hover {
+    transform: rotate(-90deg);
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.weather-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--bg-color-1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-wrapper * {
+    user-select: none;
+    color: #fff;
+}
+
+.weather-right-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.weather-left-block {
+    width: 120px;
+    height: 100%;
+}
+
+.weather-right-block .weather-item-wrapper {
+    margin-bottom: 10px;
+}
+
+.weather-right-block .weather-item-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.weather-item-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    font-size: 60px;
+}
+
+.weather-city,
+.weather-humidity,
+.weather-wind {
+    padding: 2px 5px;
+}
+
+.weather-city {
+    min-width: 50px;
+    box-sizing: border-box;
+}
+
+.weather-temperature {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.weather-item-icon {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(100%) !important;
+    margin-right: 5px;
+}
+
+.weather-item-icon-location {
+    background-image: url(../icons/weather_location.svg);
+}
+
+.weather-item-icon-humidity {
+    background-image: url(../icons/water_humidity.svg);
+}
+
+.weather-item-icon-wind {
+    background-image: url(../icons/weather_windy.svg);
+}
+
+.weather-wrapper.weather-city-error:after {
+    content: "Не корректное название города";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    padding: 2px 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(255, 41, 41);
+    background-color: rgba(255, 255, 255, 0.9);
+    display: block;
+    width: 250px;
+    min-width: 100%;
+}
+
+.weather-city.weather-city-empty {
+    border-bottom: 1px solid #fff;
+}
+
+.editable {
+    min-width: 50px;
+    display: inline-block;
+}
+
+.editable:hover {
+    color: green;
+    transition: 0.25s;
+    -moz-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -o-transition: 0.25s;
+}
+
+@media (max-width: 1024px) {
+    .citation {
+        width: 98%;
+    }
+}
+
+@media (max-width: 700px) {
+    .time {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .weather-wrapper {
+        top: 5px;
+        left: 5px;
+    }
+    .bg-nav {
+        top: 5px;
+        right: 5px;
+        padding: 0;
+    }
+    .bg-nav h3 {
+        display: none;
+    }
+    .time {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .wrapper {
+        padding: 10px;
+    }
+    .bg-nav {
+        top: 5px;
+        right: 5px;
+    }
+    .time {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+    .date {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+    h1 {
+        padding: 0 50px;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .citation {
+        width: 100%;
+        padding: 10px 10px;
+        padding-right: 40px;
+    }
+    .citation-text {
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .citation-author {
+        font-size: 11px;
+    }
+    .bg-nav-wrap {
+        flex-direction: column;
+    }
+    .bg-nav {
+        padding: 0;
+        top: 0;
+        right: 0;
+    }
+    .btn-bg-nav {
+        width: 60px;
+        height: 40px;
+    }
+    .btn-bg-nav .btn-bg-nav-icon {
+        font-size: 2rem;
+    }
+    .citation-author {
+        display: block;
+    }
+    .weather-wrapper {
+        top: 0;
+        left: 0;
+        padding: 10px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    .weather-left-block {
+        width: 60px;
+    }
+    .weather-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    .weather-temperature {
+        font-size: 18px;
+    }
+    .weather-item-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
